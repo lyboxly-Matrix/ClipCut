@@ -1,5 +1,31 @@
 # ClipCut
 
+**把视频剪成你需要的样子。**
+
+片段剪辑 · 画面裁剪 · 亮度实时预览。
+
+[下载 Windows 版本](https://github.com/lyboxly-Matrix/ClipCut/releases) · [亮点](#项目亮点) · [快速上手](#快速上手) · [使用与开发](#使用与开发) · [反馈问题](https://github.com/lyboxly-Matrix/ClipCut/issues)
+
+![ClipCut 功能流程：选取片段 → 调整画面 → 导出成片](overview.svg)
+
+> 图中为功能流程示意，并非应用界面截图。
+
+## 项目亮点
+
+| 亮点 | 能帮你做什么 |
+| --- | --- |
+| **片段剪辑** | 为一个视频选取多个片段，分别保存或合成一段。 |
+| **实时画面调整** | 裁剪和亮度直接反馈到主播放画面，播放、暂停和拖动进度时都能预览。 |
+| **导出方式可选** | 无需画面调整时可无损快剪；需要精确切点或画面调整时使用重新编码。 |
+
+## 快速上手
+
+下载 Windows ZIP 并完整解压 → 运行 `ClipCut.exe` → 拖入视频 → 设置片段 → 导出。
+
+需安装 FFmpeg 与 FFprobe，或将它们放到 EXE 同目录；请保留程序旁的 `文件` 文件夹。
+
+## 使用与开发
+
 Windows 视频剪辑工具，使用 Python 3.11、PySide6 和 FFmpeg。
 
 ## 功能
@@ -53,3 +79,4 @@ Windows 打包可运行 `build.ps1`，脚本使用独立 `.buildenv` 环境，�
 源码入口为 `main.py`；界面在 `app.py`，裁剪选择在 `crop.py`，实时播放效果在 `video_view.py`，导出在 `workers.py`。
 
 第三方依赖说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。不包含自动开球识别功能、用户视频或导出结果。
+
